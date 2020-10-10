@@ -13,6 +13,7 @@ namespace nguyenanhung\Microsoft\Teams;
 use Exception;
 use Sebbmyr\Teams\TeamsConnector;
 use Sebbmyr\Teams\Cards\SimpleCard;
+use Sebbmyr\Teams\TeamsConnectorInterface;
 
 /**
  * Class MicrosoftTeamsConnector
@@ -23,7 +24,7 @@ use Sebbmyr\Teams\Cards\SimpleCard;
  */
 class MicrosoftTeamsConnector
 {
-    const VERSION = '1.0.0';
+    const VERSION = '1.0.1';
 
     /** @var string webhookUrl */
     private $webhookUrl;
@@ -91,5 +92,34 @@ class MicrosoftTeamsConnector
         }
     }
 
+    /**
+     * Function sendCardMessage
+     *
+     * @param \Sebbmyr\Teams\TeamsConnectorInterface $card
+     *
+     * @return bool
+     * @author   : 713uk13m <dev@nguyenanhung.com>
+     * @copyright: 713uk13m <dev@nguyenanhung.com>
+     * @time     : 10/10/2020 13:38
+     */
+    public function sendCardMessage(TeamsConnectorInterface $card)
+    {
+        try {
+            // create connector instance
+            $connector = new TeamsConnector($this->webhookUrl);
+            $connector->send($card);
+
+            return TRUE;
+        }
+        catch (Exception $e) {
+            if (function_exists('log_message')) {
+                log_message('error', $e->getMessage());
+                log_message('error', $e->getTraceAsString());
+            }
+
+            return FALSE;
+        }
+
+    }
 
 }
