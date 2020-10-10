@@ -49,9 +49,9 @@ class MicrosoftTeamsConnector
      * @return $this
      * @author   : 713uk13m <dev@nguyenanhung.com>
      * @copyright: 713uk13m <dev@nguyenanhung.com>
-     * @time     : 09/03/2020 36:05
+     * @time     : 10/10/2020 01:38
      */
-    public function setWebHook($webhookUrl = '')
+    public function setWebHook(string $webhookUrl = '')
     {
         $this->webhookUrl = $webhookUrl;
 
@@ -67,9 +67,9 @@ class MicrosoftTeamsConnector
      * @return bool
      * @author   : 713uk13m <dev@nguyenanhung.com>
      * @copyright: 713uk13m <dev@nguyenanhung.com>
-     * @time     : 09/03/2020 37:12
+     * @time     : 10/10/2020 01:51
      */
-    public function simpleMessage($title = 'Simple card title', $text = 'Simple card text')
+    public function simpleMessage(string $title = 'Simple card title', string $text = 'Simple card text')
     {
         try {
             // create connector instance
@@ -90,4 +90,6 @@ class MicrosoftTeamsConnector
             return FALSE;
         }
     }
+
+
 }
