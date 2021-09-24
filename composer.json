@@ -22,7 +22,7 @@
         }
     ],
     "require": {
-        "php": ">=7.0",
+        "php": ">=5.4",
         "ext-curl": "*",
         "ext-json": "*",
         "sebbmeyer/php-microsoft-teams-connector": "^0.2"

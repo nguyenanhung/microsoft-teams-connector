@@ -24,7 +24,7 @@ use Sebbmyr\Teams\TeamsConnectorInterface;
  */
 class MicrosoftTeamsConnector
 {
-    const VERSION = '1.0.3';
+    const VERSION = '1.0.4';
 
     /** @var string webhookUrl */
     private $webhookUrl;
@@ -52,10 +52,9 @@ class MicrosoftTeamsConnector
      * @copyright: 713uk13m <dev@nguyenanhung.com>
      * @time     : 10/10/2020 01:38
      */
-    public function setWebHook(string $webhookUrl = '')
+    public function setWebHook($webhookUrl = '')
     {
         $this->webhookUrl = $webhookUrl;
-
         return $this;
     }
 
@@ -70,7 +69,7 @@ class MicrosoftTeamsConnector
      * @copyright: 713uk13m <dev@nguyenanhung.com>
      * @time     : 10/10/2020 01:51
      */
-    public function simpleMessage(string $title = 'Simple card title', string $text = 'Simple card text')
+    public function simpleMessage($title = 'Simple card title', $text = 'Simple card text')
     {
         try {
             // create connector instance
@@ -79,16 +78,13 @@ class MicrosoftTeamsConnector
             $data = array('title' => $title, 'text' => $text);
             $card = new SimpleCard($data);
             $connector->send($card);
-
-            return TRUE;
-        }
-        catch (Exception $e) {
+            return true;
+        } catch (Exception $e) {
             if (function_exists('log_message')) {
                 log_message('error', $e->getMessage());
                 log_message('error', $e->getTraceAsString());
             }
-
-            return FALSE;
+            return false;
         }
     }
 
@@ -108,18 +104,13 @@ class MicrosoftTeamsConnector
             // create connector instance
             $connector = new TeamsConnector($this->webhookUrl);
             $connector->send($card);
-
-            return TRUE;
-        }
-        catch (Exception $e) {
+            return true;
+        } catch (Exception $e) {
             if (function_exists('log_message')) {
                 log_message('error', $e->getMessage());
                 log_message('error', $e->getTraceAsString());
             }
-
-            return FALSE;
+            return false;
         }
-
     }
-
 }
