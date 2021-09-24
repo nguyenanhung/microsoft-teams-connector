@@ -24,7 +24,7 @@ use Sebbmyr\Teams\TeamsConnectorInterface;
  */
 class MicrosoftTeamsConnector
 {
-    const VERSION = '1.0.4';
+    const VERSION = '2.0.0';
 
     /** @var string webhookUrl */
     private $webhookUrl;
@@ -37,7 +37,7 @@ class MicrosoftTeamsConnector
      * @copyright: 713uk13m <dev@nguyenanhung.com>
      * @time     : 09/03/2020 26:17
      */
-    public function getVersion()
+    public function getVersion(): string
     {
         return self::VERSION;
     }
@@ -52,7 +52,7 @@ class MicrosoftTeamsConnector
      * @copyright: 713uk13m <dev@nguyenanhung.com>
      * @time     : 10/10/2020 01:38
      */
-    public function setWebHook($webhookUrl = '')
+    public function setWebHook(string $webhookUrl = ''): MicrosoftTeamsConnector
     {
         $this->webhookUrl = $webhookUrl;
         return $this;
@@ -69,7 +69,7 @@ class MicrosoftTeamsConnector
      * @copyright: 713uk13m <dev@nguyenanhung.com>
      * @time     : 10/10/2020 01:51
      */
-    public function simpleMessage($title = 'Simple card title', $text = 'Simple card text')
+    public function simpleMessage(string $title = 'Simple card title', string $text = 'Simple card text'): bool
     {
         try {
             // create connector instance
@@ -98,7 +98,7 @@ class MicrosoftTeamsConnector
      * @copyright: 713uk13m <dev@nguyenanhung.com>
      * @time     : 10/10/2020 13:38
      */
-    public function sendCardMessage(TeamsConnectorInterface $card)
+    public function sendCardMessage(TeamsConnectorInterface $card): bool
     {
         try {
             // create connector instance
