@@ -10,6 +10,11 @@
 
 Gửi tin nhắn tới Channel Microsoft Teams sử dụng WebHook Connector
 
+## Version
+
+- [x] V1.x support all PHP version `>=5.4`
+- [x] V2.x support all PHP version `>=7.0`
+
 ## Contact
 
 | STT  | Họ tên         | SĐT           | Email           | Skype            |
