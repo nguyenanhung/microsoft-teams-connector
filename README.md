@@ -1,10 +1,9 @@
-[![Latest Stable Version](https://poser.pugx.org/nguyenanhung/microsoft-teams-connector/v/stable)](https://packagist.org/packages/nguyenanhung/microsoft-teams-connector)
-[![Total Downloads](https://poser.pugx.org/nguyenanhung/microsoft-teams-connector/downloads)](https://packagist.org/packages/nguyenanhung/microsoft-teams-connector)
-[![Monthly Downloads](http://poser.pugx.org/nguyenanhung/microsoft-teams-connector/d/monthly)](https://packagist.org/packages/nguyenanhung/microsoft-teams-connector)
-[![Latest Unstable Version](https://poser.pugx.org/nguyenanhung/microsoft-teams-connector/v/unstable)](https://packagist.org/packages/nguyenanhung/microsoft-teams-connector)
-[![composer.lock](https://poser.pugx.org/nguyenanhung/microsoft-teams-connector/composerlock)](https://packagist.org/packages/nguyenanhung/microsoft-teams-connector)
-[![License](https://poser.pugx.org/nguyenanhung/microsoft-teams-connector/license)](https://packagist.org/packages/nguyenanhung/microsoft-teams-connector)
-[![PHP Version Require](http://poser.pugx.org/nguyenanhung/microsoft-teams-connector/require/php)](https://packagist.org/packages/nguyenanhung/microsoft-teams-connector)
+[![Latest Stable Version](https://img.shields.io/packagist/v/nguyenanhung/microsoft-teams-connector.svg?style=flat-square)](https://packagist.org/packages/nguyenanhung/microsoft-teams-connector)
+[![Total Downloads](https://img.shields.io/packagist/dt/nguyenanhung/microsoft-teams-connector.svg?style=flat-square)](https://packagist.org/packages/nguyenanhung/microsoft-teams-connector)
+[![Daily Downloads](https://img.shields.io/packagist/dd/nguyenanhung/microsoft-teams-connector.svg?style=flat-square)](https://packagist.org/packages/nguyenanhung/microsoft-teams-connector)
+[![Monthly Downloads](https://img.shields.io/packagist/dm/nguyenanhung/microsoft-teams-connector.svg?style=flat-square)](https://packagist.org/packages/nguyenanhung/microsoft-teams-connector)
+[![License](https://img.shields.io/packagist/l/nguyenanhung/microsoft-teams-connector.svg?style=flat-square)](https://packagist.org/packages/nguyenanhung/microsoft-teams-connector)
+[![PHP Version Require](https://img.shields.io/packagist/dependency-v/nguyenanhung/microsoft-teams-connector/php)](https://packagist.org/packages/nguyenanhung/microsoft-teams-connector)
 
 # PHP Microsoft Teams Connector
 
